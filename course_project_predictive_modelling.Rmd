@@ -81,6 +81,8 @@ Reading the test set in R and Predicting the cross validated model on test set
 
 
  test <- read.csv("pml-testing.csv")  
-test_pred <- predict(mod_cv,newdata = test)  
+test_pred <- predict(mod_cv,newdata = test) 
+#out of sample error
+error <- (1-ConfusionMatrix(test$classe,test_pred)[3][1])*100
 
 
