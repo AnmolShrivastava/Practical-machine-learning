@@ -3,20 +3,20 @@
 ## This is a Rmd document for machine learning course project.This document describes the methods used for analysis and building model
 Reading the train data into*
 
-train <- read.csv("pml-training.csv") 
-summary(train)
+train <- read.csv("pml-training.csv")   
+summary(train)  
 
-From summary we can see that Data has lot of NAs.
-All variables either have 19216 NAs or none.Since the number of NAs in the variables is quite high,it's better to remove these variables.
-Na_count calculates the count of NAs in each variable 
+From summary we can see that Data has lot of NAs.  
+All variables either have 19216 NAs or none.Since the number of NAs in the variables is quite high,it's better to remove these variables.  
+Na_count calculates the count of NAs in each variable   
 
-NA_count <- apply(train,2,function(x){sum(is.na(x))})
-
-
-subsetting the train data with variables which have no NAs
+NA_count <- apply(train,2,function(x){sum(is.na(x))})  
 
 
-train_clean <- train[, names(which(NA_count < 19216))]
+subsetting the train data with variables which have no NAs  
+
+
+train_clean <- train[, names(which(NA_count < 19216))]  
 
 Removing variables that will not be used in model building
 
