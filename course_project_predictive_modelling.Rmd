@@ -1,9 +1,9 @@
 ## R Markdown
 
-This is a Rmd document for machine learning course project.This document describes the methods used for analysis and building model
+## This is a Rmd document for machine learning course project.This document describes the methods used for analysis and building model
 Reading the train data into*
 
-train <- read.csv("pml-training.csv") \n
+train <- read.csv("pml-training.csv") 
 summary(train)
 
 From summary we can see that Data has lot of NAs.
